@@ -1,0 +1,21 @@
+config:
+  runTime: "NodeJs"
+  version: ""
+  framework: "Docusaurus"
+  buildCommand: "npm run build"
+  buildDir: "build"
+  runCommand: "npm run serve"
+  installCommand: "npm install"
+ports:
+  - protocol: "HTTPS"
+    targetProtocol: "HTTP"
+    listeningPort: "443"
+    targetPort: "3000"
+    public: true
+    path: "/"
+    isAuth: false
+    login: ""
+    password: ""
+environments:
+  - key: "ENV"
+    value: "production"
